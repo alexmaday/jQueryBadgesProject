@@ -8,7 +8,10 @@ $(document).ready(function () {
         var courses = response.courses.completed;
         
         for (var i = 0, l = courses.length; i < l; i++) {
-          $('#badges').append('<p>' + courses[i].title + '</p>');
+          // var div = $('div').addClass('course');
+          var course = $('<div><h3>' + courses[i].title + '</h3><img src="' + courses[i].badge +'" /></div>');
+          course.addClass('course');
+          $('#badges').append(course);
           
         }
       }
