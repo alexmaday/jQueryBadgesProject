@@ -9,7 +9,7 @@ $(document).ready(function () {
         
         for (var i = 0, l = courses.length; i < l; i++) {
           // var div = $('div').addClass('course');
-          var course = $('<div><h3>' + courses[i].title + '</h3><img src="' + courses[i].badge +'" /></div>');
+          var course = $('<div><h3>' + courses[i].title + '</h3><img src="' + courses[i].badge +'" /><a href="' + courses[i].url + '" target=_blank class="btn btn-primary">See Course</a></div>');
           course.addClass('course');
           $('#badges').append(course);
           
