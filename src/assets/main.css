@@ -39,6 +39,6 @@ body {
   display: block;
 }
 
-.btn {
+button.btn {
   font-family: sans-serif;
 }
