@@ -6,12 +6,20 @@ $(document).ready(function () {
       dataType: 'jsonp',
       success: function (response) {
         var courses = response.courses.completed;
+        console.log(courses);
         
         for (var i = 0, l = courses.length; i < l; i++) {
-          // var div = $('div').addClass('course');
-          var course = $('<div><h3>' + courses[i].title + '</h3><img src="' + courses[i].badge +'" /><a href="' + courses[i].url + '" target=_blank class="btn btn-primary">See Course</a></div>');
-          course.addClass('course');
-          $('#badges').append(course);
+          let course = courses[i];
+
+          let title = course.title, imgSrc = course.badge, link = course.url;
+
+          $div = $('<div>', {"class": "course", });
+          $title = $('<h3>').text(title);
+          $img = $('<img>', {"src": imgSrc});
+          $link = $('<a>', {"href": link, "target": "_blank", "class": "btn btn-primary"}).text('See Course');
+          
+          $div.append($title, $img, $link);
+          $('#badges').append($div);
           
         }
       }
