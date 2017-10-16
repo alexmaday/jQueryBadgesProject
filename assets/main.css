@@ -1,6 +1,6 @@
 
 body {
-  font-family: 'Helvetica Neue', serif;
+  font-family: 'Georgia', 'Helvetica Neue', serif;
   font-size: 18px;
 }
 
@@ -37,4 +37,8 @@ body {
 
 .course a {
   display: block;
+}
+
+.btn {
+  font-family: sans-serif;
 }
